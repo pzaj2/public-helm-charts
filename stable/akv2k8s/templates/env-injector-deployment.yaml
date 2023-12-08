@@ -92,6 +92,8 @@ spec:
             value: {{ $keyVaultAuth }}
           - name: USE_AUTH_SERVICE
             value: {{ .Values.env_injector.authService | quote }}
+          - name: USE_WORKLOAD_IDENTITY
+            value: {{ .Values.env_injector.authService | quote }}
           - name: AZUREKEYVAULT_ENV_IMAGE
             value: {{ .Values.env_injector.envImage.repository }}:{{ .Values.env_injector.envImage.tag }}
           - name: DOCKER_IMAGE_INSPECTION_TIMEOUT
